@@ -2,10 +2,9 @@
 <html class="no-js">
     <head>
         <meta charset="utf-8">
-        <title>TWTfavor</title>
+        <title>TWTfavor - Your Profile </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-        <meta name="robots" content="noindex, nofollow">
         <link rel="shortcut icon" href="/favicon.ico">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css styles/vendor.css -->
@@ -13,39 +12,55 @@
         <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
         <!-- endbower -->
         <!-- endbuild -->
-        <!-- build:css(.tmp) styles/main.css -->
-        <link rel="stylesheet" href="styles/main.css">
+        <!-- build:css(.tmp) styles/blog.css -->
+        <link rel="stylesheet" href="styles/blog.css">
         <!-- endbuild -->
     </head>
     <body>
-        <!--[if lt IE 11]>
+        <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        
+        
+        <div class="container-fluid">
+            <div class="row">
+                
+                <!-- Main content goes here -->
+                <div class="col-sm-8 blog-main">
+                    <div class="">
 
 
-        <div class="container">
-            <form class="form-signin" role="form">
-                <h2 class="form-signin-heading">Please sign in using twitter</h2>                
-                <a href="/auth/" ><img src="images/sign-in-with-twitter.png" alt="Sign in using twitter" title=""  /></a>
-            </form>
+                    </div>
+
+
+
+                </div>
+
+
+
+
+
+                <!-- Sidebar Profile Information -->
+                <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+                    <div class="sidebar-module">
+                        <div class="input-group">
+                            <span class="input-group-addon"></span>
+                            <input type="text" class="form-control" placeholder="Username">
+                        </div>
+                    
+                    </div>
+                
+                </div>
+            </div>
+        
         </div>
-
+        
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="../bower_components/jquery/dist/jquery.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-11552074-8');ga('send','pageview');
-        </script>
 
         <!-- build:js scripts/plugins.js -->
         <script src="../bower_components/bootstrap/js/affix.js"></script>
@@ -60,6 +75,8 @@
         <script src="../bower_components/bootstrap/js/scrollspy.js"></script>
         <script src="../bower_components/bootstrap/js/collapse.js"></script>
         <script src="../bower_components/bootstrap/js/tab.js"></script>
+        <script src="../bower_components/angular/angular.js"></script>
+
         <!-- endbuild -->
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
