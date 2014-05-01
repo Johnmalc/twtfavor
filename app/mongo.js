@@ -8,28 +8,19 @@ var T = new Twit({
     access_token: "49683260-OPvS72ypBtmvuiSFNMk0fKD9a7rJQQOHp2eMuF5Ux",
     access_token_secret: "uXaPifAE5yEoBuqBwSMPq95aJ20swQgsOBndSPQXb9t0l"
 });
+// plne funktcni
+T.get('search/tweets', { q: 'banana', count: 1 }, function(err, data, response) {
 
-var stream = T.stream('statuses/filter', { track: ['bananas', 'oranges', 'strawberries'] })
-var tw;
-stream.on('tweet', function (tweet) {
-      var tw = tweet;
-}) 
-var MongoClient = require('mongodb').MongoClient
-    , format = require('util').format;
-MongoClient.connect('mongodb://localhost:27017/tweets', function (err, db) {
-    if (err) throw err;
+  var MongoClient = require('mongodb').MongoClient, format = require('util').format;
 
-    var collection = db.collection('test_insert');
-    collection.insert({id_:tw},function(err, docs) {
-            console.log("successfully connected to the database");
+  MongoClient.connect('mongodb://127.0.0.1:27017/tweets', function(err, db) {
+      if(err) throw err;
 
-   });
+      var collection = db.collection('test_insert');
+      collection.insert(data , function(err, result) {
+          console.log(data);
+      });
+    db.close();  
+  });
 
-    // Locate all the entries using find
-   // collection.find().toArray(function(err, results) {
-   //     console.dir(results);
-        // Let's close the db
-        
- //   });
-    db.close();
 });
