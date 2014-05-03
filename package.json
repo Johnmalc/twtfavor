@@ -40,6 +40,6 @@
     "node": ">=0.11.0"
   },
   "scripts": {
-    "start": "node app/serv.js"
+    "start": "cd app & node serv.js"
   }
 }
