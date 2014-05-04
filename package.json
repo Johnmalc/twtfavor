@@ -1,9 +1,10 @@
 {
   "name": "projekt",
-  "version": "0.1.0",
+  "version": "0.2.0",
+  "homepage": "https://github.com/malcjohn/twt",
   "dependencies": {},
   "devDependencies": {
-    "grunt": "~0.4.1",
+    "grunt": "latest",
     "grunt-contrib-copy": "~0.5.0",
     "grunt-contrib-concat": "~0.3.0",
     "grunt-contrib-uglify": "~0.4.0",
@@ -25,19 +26,20 @@
     "load-grunt-tasks": "~0.4.0",
     "time-grunt": "~0.3.1",
     "jshint-stylish": "~0.1.5",
-    "passport": "~0.2.0",
+    "passport": "latest",
     "bcrypt-nodejs": "0.0.3",
     "connect-flash": "~0.1.1",
     "express": "~4.1.0",
     "passport-twitter": "~0.1.5",
     "everyauth": "~0.4.5",
     "ntwitter": "~0.5.0",
-    "mongodb": "~1.4.2",
-    "twit": "~1.1.14",
-    "mongoose": "~3.8.8"
+    "mongodb": "latest",
+    "twit": "latest",
+    "mongoose": "~3.8.8",
+    "jade": "last"
   },
   "engines": {
-    "node": ">=0.11.0"
+    "node": ">=0.10.0"
   },
   "scripts": {
     "start": "cd app & node serv.js"
