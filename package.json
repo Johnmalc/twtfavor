@@ -36,7 +36,8 @@
     "mongodb": "latest",
     "twit": "latest",
     "mongoose": "~3.8.8",
-    "jade": "last"
+    "jade": "last",
+    "grunt-jsdoc-plugin": "latest"
   },
   "engines": {
     "node": ">=0.10.0"

@@ -132,6 +132,14 @@ module.exports = function (grunt) {
                 'test/spec/{,*/}*.js'
             ]
         },
+        jsdoc : {
+            dist : {
+                src: ['src/*.js', 'test/*.js'], 
+                options: {
+                    destination: 'doc'
+                }
+            }
+        },
 
         // Mocha testing framework configuration options
         mocha: {
@@ -351,6 +359,7 @@ module.exports = function (grunt) {
         'copy:dist',
         'rev',
         'usemin',
+        'grunt-jsdoc',
         'htmlmin'
     ]);
 
