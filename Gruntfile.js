@@ -132,6 +132,7 @@ module.exports = function (grunt) {
                 'test/spec/{,*/}*.js'
             ]
         },
+        /*
         jsdoc : {
             dist : {
                 src: ['src/*.js', 'test/*.js'], 
@@ -140,7 +141,7 @@ module.exports = function (grunt) {
                 }
             }
         },
-
+        */
         // Mocha testing framework configuration options
         mocha: {
             all: {
@@ -182,7 +183,8 @@ module.exports = function (grunt) {
                         '<%= config.dist %>/scripts/{,*/}*.js',
                         '<%= config.dist %>/styles/{,*/}*.css',
                         '<%= config.dist %>/images/{,*/}*.*',
-                        '<%= config.dist %>/styles/fonts/{,*/}*.*'
+                        '<%= config.dist %>/styles/fonts/{,*/}*.*',
+                        '<%= config.dist %>/profile/*.*'
                     ]
                 }
             }
@@ -277,9 +279,10 @@ module.exports = function (grunt) {
                     src: [
                         '*.{ico,png,txt}',
                         '.htaccess',
-                        'images/{,*/}*.webp',
+                        'images/{,*/}*.*',
                         '{,*/}*.html',
-                        'styles/fonts/{,*/}*.*'
+                        'styles/fonts/{,*/}*.*',
+                        'profile/*.*'
                     ]
                 }, {
                     expand: true,
