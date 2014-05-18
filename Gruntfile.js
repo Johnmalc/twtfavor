@@ -11,6 +11,7 @@ module.exports = function (grunt) {
 
     // Load grunt tasks automatically
     require('load-grunt-tasks')(grunt);
+    grunt.loadNpmTasks('grunt-contrib-qunit');
 
     // Time how long tasks take. Can help when optimizing build times
     require('time-grunt')(grunt);
@@ -131,25 +132,6 @@ module.exports = function (grunt) {
                 '!<%= config.app %>/scripts/vendor/*',
                 'test/spec/{,*/}*.js'
             ]
-        },
-        /*
-        jsdoc : {
-            dist : {
-                src: ['src/*.js', 'test/*.js'], 
-                options: {
-                    destination: 'doc'
-                }
-            }
-        },
-        */
-        // Mocha testing framework configuration options
-        mocha: {
-            all: {
-                options: {
-                    run: true,
-                    urls: ['http://<%= connect.test.options.hostname %>:<%= connect.test.options.port %>/index.html']
-                }
-            }
         },
 
         // Add vendor prefixed styles
@@ -347,7 +329,6 @@ module.exports = function (grunt) {
 
         grunt.task.run([
             'connect:test',
-            'mocha'
         ]);
     });
 
@@ -362,13 +343,14 @@ module.exports = function (grunt) {
         'copy:dist',
         'rev',
         'usemin',
-        'grunt-jsdoc',
         'htmlmin'
     ]);
 
     grunt.registerTask('default', [
         'newer:jshint',
+        'concat',
         'test',
         'build'
     ]);
+    grunt.loadNpmTasks('grunt-contrib-concat');
 };
